@@ -1,0 +1,18 @@
+[32mINFO    [0m root:test_TripShepherd.py:33 Website is launching
+[32mINFO    [0m root:test_TripShepherd.py:36 Select Find Your City
+[32mINFO    [0m root:test_TripShepherd.py:37 Multiple city is displayed on page
+[32mINFO    [0m root:test_TripShepherd.py:42 Select Austin City
+[32mINFO    [0m root:test_TripShepherd.py:45 Select Private Tour of Austin City
+[32mINFO    [0m root:test_TripShepherd.py:48 Exclusive Private Tour of Austin City
+[32mINFO    [0m root:test_TripShepherd.py:56 ***** The date 19 has been chosen on the calendar. ***** 
+[32mINFO    [0m root:test_TripShepherd.py:59 ***** From the passengers dropdown, five passengers are selected. ***** 
+[32mINFO    [0m root:test_TripShepherd.py:62 ***** Verify price remains the same ***** 
+[32mINFO    [0m root:test_TripShepherd.py:67 ***** Select on Book Now Button ***** 
+[32mINFO    [0m root:test_TripShepherd.py:68 ***** The checkout page appears. ***** 
+[32mINFO    [0m root:test_TripShepherd.py:71 ***** Enter Name Field ***** 
+[32mINFO    [0m root:test_TripShepherd.py:74 ***** Enter Email Field ***** 
+[32mINFO    [0m root:test_TripShepherd.py:77 ***** Enter Phone Number ***** 
+[32mINFO    [0m root:test_TripShepherd.py:83 ***** Enter Card Number ***** 
+[32mINFO    [0m root:test_TripShepherd.py:90 ***** Enter Expiry Date ***** 
+[32mINFO    [0m root:test_TripShepherd.py:93 ***** Enter CVS code ***** 
+[32mINFO    [0m root:test_TripShepherd.py:98  The Card Number Field Error Message appears is verified.

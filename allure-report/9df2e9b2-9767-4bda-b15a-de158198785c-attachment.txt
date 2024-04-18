@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2051 ** Web-End Verification started **
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2056 ** YopMail Verification **

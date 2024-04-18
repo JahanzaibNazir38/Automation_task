@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2051 ** Web-End Verification started **
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2056 ** YopMail Verification **
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2065 ** Dr. iQ Web Login **
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2076 ** Logged in --> Patient Registration - Web **

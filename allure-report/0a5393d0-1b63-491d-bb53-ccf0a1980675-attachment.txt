@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1863 ******Test_18_PatientRegistration| New Patient| Mob-Patient Approve-No ******
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1866 ***** Mobile driver initialized *****

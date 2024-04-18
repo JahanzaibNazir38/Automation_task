@@ -1,0 +1,10 @@
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1863 ******Test_18_PatientRegistration| New Patient| Mob-Patient Approve-No ******
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1866 ***** Mobile driver initialized *****
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1875 ***** Verifying Create Account*****
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1887 *******Verifying Start Registration Process Screen*******
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1902 ***** Start Registration Process submitted! *****
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1903 ***** Detailed Registration Form *****
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:1976 ** Registration form filled ! **
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2009 ** Set Notifications **
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2025 ** Navigated to Login Screen **
+[32mINFO    [0m root:test_PatientRegistrationMobile.py:2044 ** Registration completed-Mobile End **

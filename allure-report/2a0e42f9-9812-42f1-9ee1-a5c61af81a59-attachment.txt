@@ -1,0 +1,10 @@
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2599 ******Test_20_PatientRegistration |New Patient| Verify Resend Email button ******
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2602 ***** Mobile driver initialized *****
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2611 ***** Verifying Create Account*****
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2622 *******Verifying Start Registration Process Screen*******
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2637 ***** Start Registration Process submitted! *****
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2638 ***** Detailed Registration Form *****
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2711 ** Registration form filled ! **
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2744 ** Set Notifications **
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2760 ** Navigated to Login Screen **
+[32mINFO    [0m root:test_PatientRegistrationMobileTC11_TC20.py:2799 ** Registration completed-Mobile End **

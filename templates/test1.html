@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <form action="{{ url_for('saveForm') }}" method="post">
+
+         <div class="mb-3">
+             <h1 style="text-align:-webkit-center">AT Tech Automation Dashboard</h1>
+            <label for="projectddl" class="form-label">Project</label>
+            <select id="selectproject" name="project_name" class="form-select project-field">
+                <option value="0">Select Project</option>
+                <option value="dr-iq">Dr. iQ</option>
+                <option value="ez-web">EZWeb</option>
+            </select>
+        </div>
+
+          <div class="mb-3" id="dr-iq-modules" style="display: none;">
+            <label class="form-label">Modules DR IQ</label>
+            <select class="js-example-basic-single" name="selectedmodule_driq" style="width:100%">
+                <option value="0" selected>Select Module</option>
+                {% for dr in dr_iq_modules %}
+                <option value="{{dr}}">{{dr}}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+           <div class="mb-3" id="dr-iq-submodules" style="display: none;">
+            <label class="form-label">Pathways</label>
+            <select class="js-example-basic-single" name="selectedsubmodule_driq" style="width:100%">
+                <option value="0" selected>Select Pathways</option>
+                {% for sdr in dr_iq_submodules %}
+                <option value="{{sdr}}">{{sdr}}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+<!--           <div class="mb-3">-->
+<!--            <label for="environment" class="form-label">Testing Environment</label>-->
+<!--            <select name="testingenvironment" class="form-select">-->
+<!--                <option value="0">Select Testing Environment</option>-->
+<!--                <option value="qa">QA</option>-->
+<!--                <option value="staging">Staging</option>-->
+<!--                <option value="live">Live</option>-->
+<!--            </select>-->
+<!--        </div>-->
+
+        <div class="mb-3">
+  <label for="environment" class="form-label">Testing Environment</label>
+  <select id="environment-select" name="testingenvironment" class="form-select">
+    <option value="0">Select Testing Environment</option>
+    <option value="qa">QA</option>
+    <option value="staging">Staging</option>
+    <option value="live">Live</option>
+  </select>
+</div>
+
+         <div class="mb-3">
+            <label for="testingcycle" class="form-label">Testing Type</label>
+            <select name="testingcycle" class="form-select">
+                <option value="0">Select Testing Type</option>
+                <option value="smoke">Smoke</option>
+                <option value="regression">Regression</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+
+            <label for="platform" class="form-label">Testing Platform</label>
+            <select id="selectplatform" name="platform_name" class="form-select platform-field">
+                <option value="0">Select Platform</option>
+                <option value="android">Android</option>
+                <option value="ios">iOS</option>
+
+            </select>
+        </div>
+
+
+
+
+
+        <div class="mb-3" id="ez-web-modules" style="display: none;">
+            <label class="form-label">Module EZ WEB</label>
+            <select class="js-example-basic-single" name="selectedmodule_ezweb" style="width:100%">
+                <option value="0" selected>Select Module</option>
+                {% for e in ez_web_modules %}
+                <option value="{{e}}">{{e}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.js-example-basic-single').select2();
+        $("#selectproject").change(function () {
+            var sel_project = this.value;
+
+            if (sel_project == 'dr-iq') {
+                 $('#ez-web-modules').hide();
+                 $('#dr-iq-modules').show();
+                 $("#dr-iq-modules").change(function () {
+                     var sel_module = $(this).find(":selected").val();
+                     if(sel_module == 'Online Consultation'){
+                        $('#dr-iq-submodules').show();
+                     } else {
+                        $('#dr-iq-submodules').hide();
+                     }
+                 });
+            }
+            else if (sel_project == 'ez-web') {
+                $('#dr-iq-modules').hide();
+                $('#ez-web-modules').show();
+            }
+            else {
+                $('#ez-web-modules').hide();
+                $('#dr-iq-modules').hide();
+            }
+        });
+    })
+</script>
+<script>
+$(document).ready(function() {
+  // Read the config.ini file and set the initial value of the baseURL variable
+  $.get('config.ini', function(data) {
+    var config = data;
+    var baseURL = config['common info']['baseURL'];
+
+    // Update the value of the baseURL variable based on the selected environment
+    $('#environment-select').on('change', function() {
+      var selectedValue = $(this).val();
+      if (selectedValue === 'qa') {
+        baseURL = 'https://qa-app.dr-iq.com/login';
+      } else if (selectedValue === 'staging') {
+        baseURL = 'https://staging-app.dr-iq.com/login';
+      } else if (selectedValue === 'live') {
+        baseURL = 'https://live-app.dr-iq.com/login';
+      }
+      // Write the updated value of the baseURL variable to the config.ini file
+      config['common info']['baseURL'] = baseURL;
+      $.ajax({
+        type: "POST",
+        url: "config.ini",
+        data: {config_data: JSON.stringify(config)},
+        success: function(response) {
+          console.log(response);
+        }
+      });
+    });
+  });
+});
+</script>
+
+
+
+
+
+
+{% endblock %}
